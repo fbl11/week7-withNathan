@@ -1,19 +1,20 @@
 (function(exports) {
-    let notes = []
 
     function NoteList() {
-
+        this.notes = []
     }
 
     NoteList.prototype = {
+        constructor: NoteList,
+
         getNotes: function() {
-            return notes
+            return this.notes
         },
 
         createNote: function(text) {
             let note = new Note();
             note.updateText(text);
-            notes.push(note);
+            this.notes.push(note);
             return note;
         },
     }
