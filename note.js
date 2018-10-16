@@ -1,9 +1,16 @@
-(function(exports) {
-    let text = 'Test'
+let Note = (function() {
+    let text = ''
 
-    function Note() {
-
+    function showText() {
+        return text
     }
 
-    exports.Note = Note;
-})(this);
+    function updateText(newString) {
+        text = newString
+    }
+
+    return {
+        showText,
+        updateText
+    }
+});
