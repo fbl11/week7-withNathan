@@ -5,34 +5,34 @@ class matchers {
 
     toEq(value) {
         if (this.testObj == value) {
-            console.log('          Passed!');
+            console.log('          Passed!')
         } else {
-            console.log(`          Expected ${this.testObj} to equal ${value}`);
+            console.log(`          Failed! Expected ${this.testObj} to equal ${value}`)
         }
     }
 
     toBe(value) {
         if (this.testObj === value) {
-            console.log('          Passed!');
+            console.log('          Passed!')
         } else { 
-            console.log(`          Expected ${this.testObj} to be ${value}`);
+            console.log(`          Failed! Expected ${this.testObj} to be ${value}`)
         }
     }
 
     toInclude(value) {
         if(this.testObj.includes(value)) {
-            console.log('          Passed!');
+            console.log('          Passed!')
         } else {
-            console.log(`          Expected ${this.testObj} to include ${value} `)
+            console.log(`          Failed! Expected ${this.testObj} to include ${value} `)
         }
     }
 }
 
-const expect = (testObj) => new matchers(testObj);
+const expect = (testObj) => new matchers(testObj)
 
 
 const describe = (desc, fn) => {
-    console.log(desc);
+    console.log(desc)
     fn();
 }
 

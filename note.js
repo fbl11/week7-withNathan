@@ -1,16 +1,32 @@
-let Note = (function() {
-    let text = ''
+// let Note = (function(text = '') {
+//     let text = text
 
-    function showText() {
-        return text
+//     function showText() {
+//         return text
+//     }
+
+//     function updateText(newString) {
+//         text = newString
+//     }
+
+//     return {
+//         showText,
+//         updateText
+//     }
+// })()
+
+var noteModule = (function() {
+
+    function Note(text) {
+        this.text = text
     }
 
-    function updateText(newString) {
-        text = newString
+    Note.prototype = {
+        showText: function() {
+            test()
+            return this.text
+        }
     }
 
-    return {
-        showText,
-        updateText
-    }
-});
+    return { Note: Note }
+})()
